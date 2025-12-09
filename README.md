@@ -111,15 +111,13 @@ bunx wrangler deploy
 
 Don't want to manage infrastructure? We offer fully managed Mnemo hosting for select clients.
 
-**Demo instance:** `https://mnemo.logosflux.io` (contact us for access)
-
 **Includes:**
 - Dedicated Worker deployment
 - Priority support
 - Custom domain
 - Usage monitoring
 
-**Contact:** [Voltage Labs](https://voltagelabs.dev) for pricing and availability.
+**Contact:** lf@logosflux.io for pricing and availability.
 
 ---
 
