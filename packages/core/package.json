@@ -1,0 +1,74 @@
+{
+  "name": "@mnemo/core",
+  "version": "0.1.0",
+  "description": "Core functionality for Mnemo - Gemini client, repo loader, types",
+  "author": "Voltage Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logos-flux/mnemo",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/logos-flux/mnemo#readme",
+  "bugs": {
+    "url": "https://github.com/logos-flux/mnemo/issues"
+  },
+  "keywords": [
+    "mcp",
+    "gemini",
+    "context",
+    "memory",
+    "ai",
+    "claude",
+    "llm",
+    "caching",
+    "context-window"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun x tsc --build",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "test": "bun test",
+    "typecheck": "bun x tsc --noEmit",
+    "prepublishOnly": "bun run clean && bun run build"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "@mozilla/readability": "^0.5.0",
+    "cheerio": "^1.0.0",
+    "fflate": "^0.8.2",
+    "ignore": "^5.3.0",
+    "jsdom": "^24.0.0",
+    "pdf-parse": "^1.1.1",
+    "pdfjs-serverless": "^0.4.0",
+    "unpdf": "^1.4.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/jsdom": "^21.1.6",
+    "typescript": "^5.7.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "mnemo",
+  "version": "0.1.0",
+  "description": "Extended memory for AI assistants - Gemini-powered context expansion layer",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run --filter=@mnemo/local dev",
+    "dev:cf": "bun run --filter=@mnemo/cf-worker dev",
+    "build": "bun run --filter='@mnemo/*' build",
+    "clean": "bun run --filter='@mnemo/*' clean",
+    "deploy": "bun run --filter=@mnemo/cf-worker deploy",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "publish:core": "cd packages/core && npm publish",
+    "publish:mcp-server": "cd packages/mcp-server && npm publish",
+    "publish:local": "cd packages/local && npm publish",
+    "publish:all": "bun run build && bun run publish:core && bun run publish:mcp-server && bun run publish:local",
+    "version": "bun run --filter='@mnemo/*' version"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7.0"
+  },
+  "author": "Voltage Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logos-flux/mnemo"
+  },
+  "keywords": [
+    "mcp",
+    "gemini",
+    "context",
+    "memory",
+    "ai",
+    "claude",
+    "llm"
+  ]
+}

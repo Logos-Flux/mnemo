@@ -1,0 +1,23 @@
+{
+  "name": "@mnemo/cf-worker",
+  "version": "0.1.0",
+  "description": "Cloudflare Workers deployment for Mnemo",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@mnemo/core": "workspace:*",
+    "@mnemo/mcp-server": "workspace:*",
+    "hono": "^4.6.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241205.0",
+    "@types/bun": "latest",
+    "typescript": "^5.7.0",
+    "wrangler": "^4.53.0"
+  }
+}

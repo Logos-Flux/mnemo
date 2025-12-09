@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "mnemo",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-12-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // D1 Database for cache metadata
+  // Create with: bunx wrangler d1 create mnemo-cache
+  // Then update database_id below with the ID from the output
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "mnemo-cache",
+      "database_id": "YOUR_D1_DATABASE_ID"
+    }
+  ],
+
+  // R2 for file staging (optional)
+  // Create with: bunx wrangler r2 bucket create mnemo-files
+  "r2_buckets": [
+    {
+      "binding": "STORAGE",
+      "bucket_name": "mnemo-files"
+    }
+  ],
+
+  // Environment variables
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+
+  // Secrets (set via wrangler secret put)
+  // GEMINI_API_KEY - Required for Gemini API access
+  // MNEMO_AUTH_TOKEN - Optional Bearer token for authentication
+  //                    If not set, endpoints are publicly accessible
+  //                    If set, /mcp and /tools/:toolName require auth
+
+  // Development settings
+  "dev": {
+    "port": 8787,
+    "local_protocol": "http"
+  }
+}

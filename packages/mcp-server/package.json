@@ -1,0 +1,61 @@
+{
+  "name": "@mnemo/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP protocol server for Mnemo",
+  "author": "Voltage Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logos-flux/mnemo",
+    "directory": "packages/mcp-server"
+  },
+  "homepage": "https://github.com/logos-flux/mnemo#readme",
+  "bugs": {
+    "url": "https://github.com/logos-flux/mnemo/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gemini",
+    "context",
+    "memory",
+    "ai",
+    "claude",
+    "llm"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun x tsc --build",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "test": "bun test",
+    "typecheck": "bun x tsc --noEmit",
+    "prepublishOnly": "bun run clean && bun run build"
+  },
+  "dependencies": {
+    "@mnemo/core": "workspace:*",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
