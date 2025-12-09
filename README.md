@@ -1,6 +1,6 @@
 # Mnemo
 
-Extended memory for AI assistants via Gemini context caching.
+Extended memory for AI assistants via [Gemini context caching](https://raw.githubusercontent.com/Logos-Flux/mnemo/refs/heads/main/you%20hold%20contex.jpg).
 
 **Mnemo** (Greek: memory) gives AI assistants like Claude access to large codebases, documentation sites, PDFs, and more by leveraging Gemini's 1M token context window and context caching features.
 
