@@ -291,4 +291,4 @@ MIT
 
 ## Credits
 
-Built by [Logos Flux](https://github.com/Logos-Flux) | [Voltage Labs](https://voltagelabs.dev)
+Built by [Logos Flux](https://www.logosflux.io) | [Voltage Labs](https://voltagelabs.net)
